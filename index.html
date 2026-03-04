@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Evan Martin | Portfolio</title>
+  <meta name="description" content="Evan Martin — Health Psychology & Human Biology (UC Merced). Research, clinical experience, and community health work." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Edit your links here once and they update everywhere -->
+  <script>
+    window.SITE_LINKS = {
+      resume: "assets/Evan-Martin-Resume.pdf",   // put your PDF in /assets
+      linkedin: "https://www.linkedin.com/in/evan-martin-89881326a/",
+      email: "mailto:youremail@ucmerced.edu",
+      github: "https://github.com/yourusername"  // optional
+    };
+  </script>
+
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">Evan Martin</div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <div class="hero-left">
+        <h1>Research + clinical work focused on health equity.</h1>
+        <p class="subtitle">
+          Health Psychology & Human Biology (UC Merced). I combine maternal–infant health research, public health data work,
+          and clinical experience to improve how people understand health and access care.
+        </p>
+
+        <div class="pill-row">
+          <span class="pill">Latch Lab: cortisol + sleep</span>
+          <span class="pill">NCPC: public health dashboards</span>
+          <span class="pill">ER medical scribe</span>
+          <span class="pill">Hospice volunteer</span>
+        </div>
+
+        <div class="cta">
+          <a class="btn primary" id="resumeBtn" target="_blank" rel="noopener">Resume (PDF)</a>
+          <a class="btn" id="linkedinBtn" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" id="emailBtn">Email</a>
+        </div>
+
+        <p class="small muted">
+          You can add more buttons (Scholar, ORCID, Posters) in 20 seconds. I’ll show you exactly where.
+        </p>
+      </div>
+
+      <div class="hero-right">
+        <div class="mini card">
+          <h2>Highlights</h2>
+          <ul>
+            <li>Maternal sleep patterns and circadian cortisol rhythms in human milk</li>
+            <li>Central Valley tobacco-control dashboards and citizen-science engagement</li>
+            <li>Emergency Department documentation in a high-volume setting</li>
+            <li>Community-facing health education</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p class="muted">
+        I’m a fourth-year student at UC Merced studying Health Psychology and Human Biology. My work connects research, clinical
+        experience, and community education to improve patient understanding and health outcomes, especially in underserved settings.
+      </p>
+    </section>
+
+    <section id="research" class="card">
+      <h2>Research</h2>
+      <div class="grid">
+        <div class="card inner">
+          <h3>Latch Lab</h3>
+          <p class="muted">
+            Exploring how maternal sleep relates to cortisol patterns in breast milk and downstream infant circadian health.
+          </p>
+          <p class="muted small">Poster-ready summaries and methods available on request.</p>
+        </div>
+
+        <div class="card inner">
+          <h3>NCPC Dashboard</h3>
+          <p class="muted">
+            Building Central Valley tobacco-control data dashboards to support research, prevention, and public health action.
+          </p>
+          <p class="muted small">Includes community-facing data communication and stakeholder use cases.</p>
+        </div>
+
+        <div class="card inner">
+          <h3>Health Education</h3>
+          <p class="muted">
+            Creating educational materials that improve medical literacy for students and patients.
+          </p>
+          <p class="muted small">Short videos, guides, and workshop-style materials.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="card">
+      <h2>Experience</h2>
+      <ul class="muted">
+        <li>Emergency Department Medical Scribe, Mercy Medical Center</li>
+        <li>Hinds Hospice Volunteer</li>
+        <li>ASUCM Director of Academic Affairs</li>
+        <li>Diversified Doctors, Founder and Vice President</li>
+        <li>CalTeach Learning Lab, K–12 STEM Education</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p class="muted small">
+        Easiest professional contact: email + LinkedIn. If you want a form that actually sends messages, we can add Formspree (free).
+      </p>
+      <div class="cta">
+        <a class="btn primary" id="emailBtn2">Email me</a>
+        <a class="btn" id="linkedinBtn2" target="_blank" rel="noopener">Message on LinkedIn</a>
+        <a class="btn" id="githubBtn" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+    <footer class="footer muted small">
+      © <span id="year"></span> Evan Martin
+    </footer>
+  </main>
+
+  <script>
+    const links = window.SITE_LINKS || {};
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const setHref = (id, href) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      if (!href) { el.style.display = "none"; return; }
+      el.href = href;
+    };
+
+    setHref("resumeBtn", links.resume);
+    setHref("linkedinBtn", links.linkedin);
+    setHref("emailBtn", links.email);
+    setHref("emailBtn2", links.email);
+    setHref("linkedinBtn2", links.linkedin);
+    setHref("githubBtn", links.github);
+  </script>
+</body>
+</html>
